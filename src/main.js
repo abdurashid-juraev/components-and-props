@@ -4,7 +4,11 @@ import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
 
-Vue.config.productionTip = false;
+import Header from './components/header_footer/header.vue'
+
+Vue.component('app-header', Header);
+
+export const bus = new Vue();
 
 new Vue({
   router,
